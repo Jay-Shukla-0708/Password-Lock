@@ -34,7 +34,7 @@ password" and asserts a `match` signal only when they are identical.
 
 
 
-!\[Block Diagram](docs/block\_diagram.png)
+![Block Diagram](docs/block_diagram.png)
 
 
 
@@ -52,13 +52,13 @@ password" and asserts a `match` signal only when they are identical.
 
 **Match Case** (Green LED ON)
 
-!\[Match](proteus/proteus\_match.png)
+![Match](proteus/proteus_match.png)
 
 
 
 **No-Match Case** (Red LED ON)
 
-!\[No Match](proteus/proteus\_nomatch.png)
+![No Match](proteus/proteus_nomatch.png)
 
 
 
@@ -128,9 +128,9 @@ Full log is available in `simulation\_output.txt`.
 
 
 
-!\[Waveform when matches](Verilog\\Waveforms\\Waveform (when matches) .png)
+![Waveform when matches](Verilog/Waveforms/Waveform_match.png)
 
-!\[Waveform when doesn't match](Verilog\\Waveforms\\Waveform (when no match).png)
+![Waveform when doesn't match](Verilog/Waveforms/Waveform_nomatch.png)
 
 
 
