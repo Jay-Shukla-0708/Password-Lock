@@ -46,7 +46,7 @@ password" and asserts a `match` signal only when they are identical.
 
 
 
-!\[Proteus Schematic](proteus/schematic.png)
+![Proteus Schematic](Proteus/schematic.png)
 
 
 
@@ -70,7 +70,7 @@ password" and asserts a `match` signal only when they are identical.
 
 **Gate-Level Design**
 
-\- \[Password\_Lock.v](verilog/gate\_level/Password\_Lock.v)
+\- [Password\_Lock.v](Verilog/Gate_Level/Gate_Level.v)
 
 
 
