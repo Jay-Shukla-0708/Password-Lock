@@ -65,7 +65,7 @@ password" and asserts a `match` signal only when they are identical.
 
 **Gate-Level Design**
 
-\- [Password\_Lock.v](Verilog/Gate_Level/Gate_level.v)
+\- [Password\_Lock.v](Verilog/Gate Level/Gate_Level.v)
 
 
 
