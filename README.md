@@ -71,7 +71,7 @@ password" and asserts a `match` signal only when they are identical.
 
 **Testbench**
 
-\- [tb/Password\_Lock.v](Verilog/Testbench/Test_bench.v)
+\- [tb/Password\_Lock.v](https://github.com/Jay-Shukla-0708/Password-Lock/blob/2310cb048c20d690fd8c206341e2a920af027056/Verilog/Testbench/Test%20bench)
 
 
 
