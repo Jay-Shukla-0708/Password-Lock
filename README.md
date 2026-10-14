@@ -45,11 +45,6 @@ password" and asserts a `match` signal only when they are identical.
 * ###### **Proteus Implementation**
 
 
-
-![Proteus Schematic](Proteus/schematic.png)
-
-
-
 **Match Case** (Green LED ON)
 
 ![Match](Proteus/proteus_match.png)
@@ -76,7 +71,7 @@ password" and asserts a `match` signal only when they are identical.
 
 **Testbench**
 
-\- \[tb\_password\_lock.v](verilog/tb/tb\_password\_lock.v)
+\- [tb/Password\_Lock.v](Verilog/Testbench/Test_bench.v)
 
 
 
