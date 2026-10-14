@@ -1,0 +1,62 @@
+`timescale 1ns/1ps
+
+module tb_password_lock;
+
+reg [3:0] stored_pw;
+reg [3:0] entered_pw;
+wire match;
+
+//Instantiate the Unit under test (UUT)
+Password_Lock uut (
+.stored_pw(stored_pw),
+.entered_pw(entered_pw),
+.match(match)
+);
+
+// Expected match signal
+reg expected_match;
+
+// Counters
+integer i;
+integer pass_count = 0;
+integer fail_count = 0;
+
+initial begin
+// Set stored password to 1010
+stored_pw = 4'b1010;
+
+// Test all 16 entered passwords
+for (i = 0; i < 16; i = i + 1) begin
+entered_pw = i[3:0];
+
+// Compute expected result
+expected_match = (stored_pw == entered_pw) ? 1'b1 : 1'b0;
+
+#10; // wait for combinational logic to settle
+
+// Compare
+if (match === expected_match) begin
+
+$display("PASS: Stored=%b, Entered=%b, Match=%b",
+stored_pw, entered_pw, match);
+pass_count = pass_count + 1;
+end 
+else begin
+$display("FAIL: Stored=%b, Entered=%b, Match=%b (expected %b)",
+stored_pw, entered_pw, match, expected_match);
+fail_count = fail_count + 1;
+end
+end
+
+// Summary
+$display("-----------------------------");
+$display("Total: %0d PASS, %0d FAIL", pass_count, fail_count);
+if (fail_count == 0)
+$display("ALL TESTS PASSED");
+else
+$display("SOME TESTS FAILED");
+$display("-----------------------------");
+$finish;
+end
+
+endmodule

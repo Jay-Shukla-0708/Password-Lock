@@ -1,0 +1,19 @@
+module Password_Lock (input wire [3:0] stored_pw, input wire [3:0] entered_pw, output wire match);
+
+wire xor_out [3:0];
+wire or_out [1:0];
+
+//74LS86 XOR Gates
+assign xor_out[3] = stored_pw [3] ^ entered_pw [3];
+assign xor_out[2] = stored_pw [2] ^ entered_pw [2];
+assign xor_out[1] = stored_pw [1] ^ entered_pw [1];
+assign xor_out[0] = stored_pw [0] ^ entered_pw [0];
+
+//7432 OR Gates
+assign or_out[1] = xor_out [3] | xor_out [2];
+assign or_out[0] = xor_out [1] | xor_out [0];
+
+//7402 NOR gate
+assign match = ~(or_out [1] | or_out [0]);
+
+endmodule
