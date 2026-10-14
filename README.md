@@ -34,7 +34,7 @@ password" and asserts a `match` signal only when they are identical.
 
 
 
-![Block Diagram](docs/block_diagram.png)
+![Block Diagram](Docs/block_diagram.png)
 
 
 
@@ -52,13 +52,13 @@ password" and asserts a `match` signal only when they are identical.
 
 **Match Case** (Green LED ON)
 
-![Match](proteus/proteus_match.png)
+![Match](Proteus/proteus_match.png)
 
 
 
 **No-Match Case** (Red LED ON)
 
-![No Match](proteus/proteus_nomatch.png)
+![No Match](Proteus/proteus_nomatch.png)
 
 
 
