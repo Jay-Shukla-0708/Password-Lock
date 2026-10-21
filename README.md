@@ -128,4 +128,20 @@ Full log is available in `simulation\_output.txt`.
 ![Waveform when doesn't match](Verilog/Waveforms/Waveform_nomatch.png)
 
 
+## RTL Implementation (Synthesizable)
+
+While the Gate-Level implementation mirrors the discrete 74-series ICs used in the Proteus schematic, the RTL version describes the design behaviorally, making it ready for synthesis and FPGA deployment.
+
+### Key Architectural Differences:
+- **Storage:** The 7475 transparent D-latch was replaced with an edge-triggered flip-flop and a system clock (`always @(posedge clk)`), which is the industry standard for robust, timing-safe memory.
+- **Comparison:** The manual XOR and NOR gate wiring was replaced with a high-level equality operator (`stored_pw == entered_pw`). The synthesis tool now automatically optimizes the logic gates.
+- **Status:** Fully synthesizable and verified in ModelSim (16/16 PASS).
+
+### RTL Files:
+- [Password_Lock_rtl.v](verilog/rtl/Password_Lock_rtl.v)
+- [tb_password_lock_rtl.v](verilog/tb/tb_password_lock_rtl.v)
+
+### RTL Simulation Waveform:
+*Notice the clock signal driving the logic, and the password latching on the clock edge.*
+![RTL Waveform](verilog/waveforms/waveform_rtl.png)
 
