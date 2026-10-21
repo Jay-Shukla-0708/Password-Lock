@@ -139,7 +139,7 @@ While the Gate-Level implementation mirrors the discrete 74-series ICs used in t
 
 ### RTL Files:
 - [Password_Lock_rtl.v](Verilog/rtl/Password_Lock_rtl.v)
-- [tb_password_lock_rtl.v](Verilog/tb/tb_password_lock_rtl.v)
+- [tb_password_lock_rtl.v](Verilog/Testbench/tb_password_lock_rtl.v)
 
 ### RTL Simulation Waveform:
 *Notice the clock signal driving the logic, and the password latching on the clock edge.*
